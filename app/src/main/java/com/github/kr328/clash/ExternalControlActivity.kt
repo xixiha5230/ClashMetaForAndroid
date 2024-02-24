@@ -24,6 +24,7 @@ import java.util.*
 class ExternalControlActivity : Activity(), CoroutineScope by MainScope() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        moveTaskToBack(true)
 
         when(intent.action) {
             Intent.ACTION_VIEW -> {
